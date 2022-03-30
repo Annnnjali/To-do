@@ -11,3 +11,8 @@ export const createTasks = (payload) => {
 export const changeStatus = (payload) => {
     return {type: ActionTypes.CHANGE_STATUS, payload}; 
 };
+
+export const deleteTask = (payload) => {
+    return {type: ActionTypes.DELETE_TASK, payload}; 
+};
+

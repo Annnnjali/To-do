@@ -79,16 +79,6 @@ const Task = ({navigation}) => {
                 <Text style={styles.text}>Back</Text>
               </TouchableOpacity>
             </View>
-            {/* <TouchableOpacity onPress={handleSubmit}>
-                <View style={styles.button}>
-                  <Text style={styles.text}>SUBMIT</Text>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={() => navigation.goBack()}>
-                <View style={styles.button}>
-                  <Text style={styles.text}>BACK</Text>
-                </View>
-              </TouchableOpacity> */}
           </View>
         )}
       </Formik>

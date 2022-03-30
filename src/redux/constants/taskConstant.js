@@ -3,4 +3,6 @@ export const ActionTypes = {
     CREATE_TASKS : 'CREATE_TASKS',
 
     CHANGE_STATUS : 'CHANGE_STATUS',
+
+    DELETE_TASK : 'DELETE_TASK',
 }

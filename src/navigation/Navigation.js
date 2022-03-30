@@ -54,7 +54,7 @@ const Navigation = () => {
             paddingLeft: 10,
           },
           headerLeft: () => <Images />,
-        }}>
+          }} >
         <Tab.Screen
           name="Home"
           component={HomeStackScreen}
