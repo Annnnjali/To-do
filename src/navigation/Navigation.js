@@ -43,17 +43,27 @@ const Navigation = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
+          headerShown: false,
           headerStyle: {
-            backgroundColor: EStyleSheet.value('$PRIMARY'),
+            backgroundColor: 'transparent',
           },
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            fontSize: 25,
-          },
+          headerTransparent: true,
+          headerTitle: '',
           headerLeftContainerStyle: {
-            paddingLeft: 10,
+            paddingLeft: 20,
           },
-          headerLeft: () => <Images />,
+        // screenOptions={{
+        //   headerStyle: {
+        //     backgroundColor: EStyleSheet.value('$PRIMARY'),
+        //   },
+        //   headerTitleStyle: {
+        //     fontWeight: 'bold',
+        //     fontSize: 25,
+        //   },
+        //   headerLeftContainerStyle: {
+        //     paddingLeft: 10,
+        //   },
+        //   headerLeft: () => <Images />,
           }} >
         <Tab.Screen
           name="Home"

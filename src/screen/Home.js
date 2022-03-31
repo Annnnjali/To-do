@@ -18,8 +18,10 @@ const Home = ({navigation}) => {
 
   const renderHeader = () => {
     return (
-      <View>
+      <View style={styles.header}>
         <Text style={styles.title}>Today's Task</Text>
+        <View style={styles.triangle}>
+        </View>
       </View>
     )
   }
@@ -29,7 +31,7 @@ const Home = ({navigation}) => {
     return (
       <TouchableOpacity onPress={() => navigation.navigate('Task')}>
         <View style={styles.icon}>
-          <Icon name='plus-square-o' size={50} color={EStyleSheet.value('$TEXT')} />
+          <Icon name='plus-square-o' size={50} color={EStyleSheet.value('$DARK')} />
         </View>
       </TouchableOpacity>
     )
@@ -41,9 +43,9 @@ const Home = ({navigation}) => {
         data={allTasks}
         renderItem={renderItem}
         keyExtractor={item => item.id}
-        ListFooterComponent={renderFooter}
         ListHeaderComponent={renderHeader}
       />
+      {renderFooter()}
     </View>
   )
 }
@@ -55,16 +57,40 @@ const styles = EStyleSheet.create({
     flex: 1,
     backgroundColor: '$BACKGROUND', 
   },
+  header: {
+    marginLeft: 10,
+    marginTop: 20,
+    marginRight: 155,
+    backgroundColor : '$PRIMARY',
+    borderTopLeftRadius: 20,
+    borderBottomLeftRadius : 20,
+    borderRadius: 10,
+    flexDirection: 'row',
+  },
   title: {
-    color: '$TEXT',
+    color: 'black',
     fontWeight: 'bold',
     fontSize: 24,
-    margin: 40,
-    textAlign: 'center',
+    padding: 20,
+  },
+  triangle: {
+    width: 0,
+    height: 0,
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderLeftWidth: 40,
+    borderRightWidth: 40,
+    borderBottomWidth: 80,
+    marginLeft: 10,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    borderTopLeftRadius : 200,
+    borderBottomColor: '$PRIMARY',
+    transform: [{ rotate: "90deg" }],
   },
   icon: {
-    marginRight: 40,
-    alignItems: 'flex-end',
-    marginVertical: 40,
+    position : 'absolute',
+    right: 30,
+    bottom : 20,
   },
 })

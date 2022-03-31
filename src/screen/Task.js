@@ -28,8 +28,10 @@ const Task = ({navigation}) => {
   };
   return (
     <ScrollView style={styles.body}>
-      <View>
-        <Text style={styles.title}> Task </Text>
+      <View style={styles.header}>
+        <Text style={styles.title}>Task</Text>
+        <View style={styles.triangle}>
+        </View>
       </View>
       <Formik
         initialValues={{title: '', description: ''}}
@@ -93,29 +95,55 @@ const styles = EStyleSheet.create({
     flex: 1,
     backgroundColor: '$BACKGROUND',
   },
+  header: {
+    marginLeft: 10,
+    marginTop: 20,
+    marginRight: 190,
+    backgroundColor : '$PRIMARY',
+    borderTopLeftRadius: 20,
+    borderBottomLeftRadius : 20,
+    borderRadius: 10,
+    flexDirection: 'row',
+  },
   title: {
-    color: '$TEXT',
+    color: '$DARK',
     fontWeight: 'bold',
     fontSize: 24,
-    margin: 30,
-    textAlign: 'center',
+    padding: 20,
+  },
+  triangle: {
+    width: 0,
+    height: 0,
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderLeftWidth: 40,
+    borderRightWidth: 40,
+    borderBottomWidth: 80,
+    marginLeft: 62,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    borderTopLeftRadius : 200,
+    borderBottomColor: '$PRIMARY',
+    transform: [{ rotate: "90deg" }],
   },
   formik_text: {
     color: '$TEXT',
     fontSize: 18,
+    marginTop: 20,
     marginHorizontal: 40,
   },
   formik_title: {
     marginHorizontal: 25,
-    marginVertical: 15,
-    backgroundColor: '$CARD_BACKGROUND',
+    marginTop: 15,
+    marginBottom: 5,
+    backgroundColor: '#ada6a5',
     borderRadius: 10,
     padding: 15,
   },
   formik_desc: {
     marginHorizontal: 25,
     marginVertical: 15,
-    backgroundColor: '$CARD_BACKGROUND',
+    backgroundColor: '#ada6a5',
     borderRadius: 10,
     paddingLeft: 15,
   },

@@ -25,8 +25,10 @@ const Todo = () => {
 
   const renderHeader = () => {
     return (
-      <View>
+      <View style={styles.header}>
         <Text style={styles.title}>To-Do</Text>
+        <View style={styles.triangle}>
+        </View>
       </View>
     );
   };
@@ -50,11 +52,35 @@ const styles = EStyleSheet.create({
     flex: 1,
     backgroundColor: '$BACKGROUND',
   },
+  header: {
+    marginLeft: 10,
+    marginTop: 20,
+    marginRight: 190,
+    backgroundColor : '$PRIMARY',
+    borderTopLeftRadius: 20,
+    borderBottomLeftRadius : 20,
+    borderRadius: 10,
+    flexDirection: 'row',
+  },
   title: {
-    color: '$TEXT',
+    color: '$DARK',
     fontWeight: 'bold',
     fontSize: 24,
-    margin: 40,
-    textAlign: 'center',
+    padding: 20,
+  },
+  triangle: {
+    width: 0,
+    height: 0,
+    backgroundColor: "transparent",
+    borderStyle: "solid",
+    borderLeftWidth: 40,
+    borderRightWidth: 40,
+    borderBottomWidth: 80,
+    marginLeft: 47,
+    borderLeftColor: "transparent",
+    borderRightColor: "transparent",
+    borderTopLeftRadius : 200,
+    borderBottomColor: '$PRIMARY',
+    transform: [{ rotate: "90deg" }],
   },
 });

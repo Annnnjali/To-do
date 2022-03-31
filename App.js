@@ -13,12 +13,12 @@ if (colorScheme === 'light') {
     $DARK: '#000000',
     $DARK_LIGHT: '#333',
     $WHITE: '#FFFFFF',
-    $PRIMARY: '#d6c4c1',
-    $BACKGROUND: '#f1f1f1',
+    $PRIMARY: '#cf867a',
+    $BACKGROUND: '#d6beba',
     $TEXT: '#000',
     $ALPHA_TEXT: '#d1d1d1',
     $GREY: '#dcdcdc',
-    $CARD_BACKGROUND: '#fff',
+    $CARD_BACKGROUND: '#ada6a5',
     $ERROR: '#ff0000',
   });
 }else{
@@ -31,7 +31,7 @@ if (colorScheme === 'light') {
     $TEXT: '#fff',
     $ALPHA_TEXT: '#d1d1d1',
     $GREY: '#dcdcdc',
-    $CARD_BACKGROUND: '#333',
+    $CARD_BACKGROUND: '#a1827c',
     $ERROR: '#ff0000',
   });
 }

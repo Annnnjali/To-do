@@ -32,10 +32,11 @@ const TaskCard = ({item}) => {
           value={item.status === 'completed' ? true : false}
           onValueChange={handleCheckbox}
           style={styles.checkbox_view}
+          tintColors={{true : 'black'}}
         />
         <Text style={styles.task_title}>{item.title}</Text>
         <TouchableOpacity onPress={handleDelete}>
-          <Icon name="delete" size={30} style={{marginTop : 15, justifyContent : 'space-between', marginRight : 20}} />
+          <Icon name="delete" size={20} style={styles.icon} />
          </TouchableOpacity>
       </View>
       <Text style={styles.task_desc}>{item.description}</Text>
@@ -48,31 +49,42 @@ export default TaskCard;
 const styles = EStyleSheet.create({
   container: {
     marginTop: 20,
-    marginHorizontal: 30,
+    marginLeft: 70,
+    marginRight: 8,
     backgroundColor: '$CARD_BACKGROUND',
-    borderRadius: 15,
+    borderBottomLeftRadius: 20,
+    borderTopLeftRadius: 20,
   },
   task: {
     flexDirection: 'row',
     
   },
   task_title: {
-    color: '$TEXT',
+    color: '$DARK',
     fontWeight: 'bold',
     fontSize: 20,
-    marginLeft: 30,
+    marginLeft: 15,
     marginTop: 15,
     flex  : 1,
   },
   task_desc: {
-    color: '$TEXT',
-    fontWeight: 'bold',
-    fontSize: 15,
+    color: '$DARK',
+    fontSize: 14,
     marginBottom : 10,
-    textAlign: 'center',
+    marginLeft: 62,
+    marginRight: 20,
   },
   checkbox_view: {
-    marginLeft: 20,
-    marginVertical: 15,
+    marginLeft: 15,
+    marginTop: 15,
+    transform: [{ scaleX: 1.1 }, { scaleY: 1.1 }],
   },
+  icon: {
+    
+    justifyContent : 'space-between', 
+    backgroundColor: '$BACKGROUND',
+    padding: 7,
+    borderBottomLeftRadius: 10,    
+    color: '#a64e4e',
+  }
 });
